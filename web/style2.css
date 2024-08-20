@@ -1,0 +1,10 @@
+.privacy-container {
+    background-color: #ecf0f1;
+    padding: 14px;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+
+h3 {
+    font-style: italic;
+}
