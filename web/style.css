@@ -4,6 +4,11 @@
     display: none;
 }
 
+:root {
+    --primary-color: #7F8DED;
+    --primary-color-active: #95a3ff;
+}
+
 * {
     font-family: 'Poppins', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -20,7 +25,7 @@ html {
 
 h2,
 h3 {
-    color: #2c3e50;
+    color: var(--primary-color);
     margin: 10px;
 }
 
@@ -28,7 +33,7 @@ p,
 a,
 label {
     color: #2c3e50;
-    margin: 10px;
+    /* margin: 10px; */
 }
 
 input {
@@ -52,7 +57,7 @@ input:focus {
 
 button {
     text-align: center;
-    background-color: #465d75;
+    background-color: var(--primary-color);
     color: #ecf0f1;
     border: none;
     border-radius: 4px;
@@ -72,7 +77,7 @@ button.delete {
 }
 
 button:active {
-    background-color: #2c3e50;
+    background-color: var(--primary-color-active);
 }
 
 button.delete:active {
