@@ -199,7 +199,7 @@ footer {
     position: absolute;
     min-width: 160px;
     padding: 10px;
-    /* background-color: #303030; */
+    background-color: #303030;
     z-index: 1;
     /* box-sizing: border-box; */
     border-radius: 10px;
