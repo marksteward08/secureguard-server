@@ -332,10 +332,27 @@ async function locate(requestedIndex) {
     document.getElementById("providerView").innerHTML = loc.provider;
     document.getElementById("batView").innerHTML = loc.bat + " %";
 
+    // ADDED
+    var batteryLevel = loc.bat;
+    var battImg = document.getElementById('battImg');
+
+    if (batteryLevel <= 20) {
+        battImg.src = "assets/1.svg";
+    } else if (batteryLevel <= 40) {
+        battImg.src = "assets/2.svg";
+    } else if (batteryLevel <= 60) {
+        battImg.src = "assets/3.svg";
+    } else if (batteryLevel <= 80) {
+        battImg.src = "assets/4.svg";
+    } else {
+        battImg.src = "assets/5.svg";
+    }
+
     const target = L.latLng(loc.lat, loc.lon);
     markers.clearLayers();
     L.marker(target).addTo(markers);
     map.setView(target, 16);
+
 }
 
 function setNoLocationDataAvailable(text) {
