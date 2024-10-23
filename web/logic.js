@@ -341,7 +341,7 @@ async function locate(requestedIndex) {
     } else if (batteryLevel <= 40) {
         battImg.src = "assets/2.svg";
     } else if (batteryLevel <= 60) {
-        battImg.src = "assets/3.svg";
+        battImg.src = "assets/3.png";
     } else if (batteryLevel <= 80) {
         battImg.src = "assets/4.svg";
     } else {
