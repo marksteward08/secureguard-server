@@ -252,3 +252,16 @@ footer {
     height: 50%;
     width: 50%;
 }
+
+/* ADDED */
+
+#batView {
+    font-size: 2em;
+    margin: 0;
+    font-weight: 700;
+}
+
+.button-operate {
+    padding: 30px 40px !important;
+    border-radius: 5px !important;
+}
