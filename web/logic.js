@@ -59,7 +59,7 @@ function init() {
             return response.text();
         })
         .then(function (versionCode) {
-            versionView.innerHTML = versionCode;
+            // versionView.innerHTML = versionCode;
         })
 
     if (getWelcomeCookie() == "") {
