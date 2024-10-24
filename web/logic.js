@@ -353,14 +353,21 @@ async function locate(requestedIndex) {
 
     const customIcon = L.icon({
         iconUrl: 'assets/phone.gif', // Path to your custom image
-        iconSize: [50, 50],  // Size of the icon [width, height]
+        iconSize: [28, 45],  // Size of the icon [width, height]
     });
 
     L.marker(target, {
         icon : customIcon
     }).addTo(markers);
-    
-    map.setView(target, 16);
+
+    L.circle(target, {
+        color: 'red',      // Border color of the circle
+        fillColor: '#f03', // Fill color (red)
+        fillOpacity: 0.5,  // Opacity of the fill
+        radius: 400         // Radius in meters (adjust this value as needed)
+    }).addTo(markers);
+
+    map.setView(target, 17);
 
 }
 
