@@ -362,7 +362,7 @@ async function locate(requestedIndex) {
     L.circle(target, {
         color: 'red',      // Border color of the circle
         fillColor: '#f03', // Fill color (red)
-        fillOpacity: 0.5,  // Opacity of the fill
+        fillOpacity: 0.3,  // Opacity of the fill
         radius: 300         // Radius in meters (adjust this value as needed)
     }).addTo(markers);
 
