@@ -350,7 +350,16 @@ async function locate(requestedIndex) {
 
     const target = L.latLng(loc.lat, loc.lon);
     markers.clearLayers();
-    L.marker(target).addTo(markers);
+
+    const customIcon = L.icon({
+        iconUrl: 'assets/phone.gif', // Path to your custom image
+        iconSize: [50, 50],  // Size of the icon [width, height]
+    });
+
+    L.marker(target, {
+        icon : customIcon
+    }).addTo(markers);
+    
     map.setView(target, 16);
 
 }
