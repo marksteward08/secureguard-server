@@ -13,21 +13,6 @@ const KEYCODE_ENTER = 13;
 const KEYCODE_ARROW_LEFT = 37;
 const KEYCODE_ARROW_RIGHT = 39;
 
-const locateButton = document.getElementById("locateButton");
-const locateOlderButton = document.getElementById("locateOlder");
-const locateNewerButton = document.getElementById("locateNewer");
-const locateDropdownButton = document.getElementById("locate");
-const locateAllButton = document.getElementById("locateAll");
-const locateGpsButton = document.getElementById("locateGps");
-const locateCellularButton = document.getElementById("locateCellular");
-const ringButton = document.getElementById("ring");
-const lockButton = document.getElementById("lock");
-const deleteButton = document.getElementById("delete");
-const cameraFrontButton = document.getElementById("cameraFront");
-const cameraBackButton = document.getElementById("cameraBack");
-const takePictureButton = document.getElementById("takePicture");
-const showPictureButton = document.getElementById("showPicture");
-
 window.addEventListener("load", (event) => init());
 
 window.onclick = function (event) {
@@ -93,20 +78,20 @@ function setupOnClicks() {
         }
     });
 
-    locateButton.addEventListener("click", async () => await prepareForLogin());
-    locateOlderButton.addEventListener("click", async () => await locateOlder());
-    locateNewerButton.addEventListener("click", async () => await locateNewer());
-    locateDropdownButton.addEventListener("click", () => showLocateDropDown());
-    locateAllButton.addEventListener("click", () => sendToPhone("locate"));
-    locateGpsButton.addEventListener("click", () => sendToPhone("locate gps"));
-    locateCellularButton.addEventListener("click", () => sendToPhone("locate cell"));
-    ringButton.addEventListener("click", () => sendToPhone("ring"));
-    lockButton.addEventListener("click", () => sendToPhone("lock"));
-    deleteButton.addEventListener("click", () => prepareDeleteDevice());
-    cameraFrontButton.addEventListener("click", () => sendToPhone("camera front"));
-    cameraBackButton.addEventListener("click", () => sendToPhone("camera back"));
-    takePictureButton.addEventListener("click", () => showCameraDropDown());
-    showPictureButton.addEventListener("click", async () => await showLatestPicture());
+    document.getElementById("locateButton").addEventListener("click", async () => await prepareForLogin());
+    document.getElementById("locateOlder").addEventListener("click", async () => await locateOlder());
+    document.getElementById("locateNewer").addEventListener("click", async () => await locateNewer());
+    document.getElementById("locate").addEventListener("click", () => showLocateDropDown());
+    document.getElementById("locateAll").addEventListener("click", () => sendToPhone("locate"));
+    document.getElementById("locateGps").addEventListener("click", () => sendToPhone("locate gps"));
+    document.getElementById("locateCellular").addEventListener("click", () => sendToPhone("locate cell"));
+    document.getElementById("ring").addEventListener("click", () => sendToPhone("ring"));
+    document.getElementById("lock").addEventListener("click", () => sendToPhone("lock"));
+    document.getElementById("delete").addEventListener("click", () => prepareDeleteDevice());
+    document.getElementById("cameraFront").addEventListener("click", () => sendToPhone("camera front"));
+    document.getElementById("cameraBack").addEventListener("click", () => sendToPhone("camera back"));
+    document.getElementById("takePicture").addEventListener("click", () => showCameraDropDown());
+    document.getElementById("showPicture").addEventListener("click", async () => await showLatestPicture());
 }
 
 function checkWebCryptoApiAvailable() {
@@ -378,7 +363,7 @@ async function locate(requestedIndex) {
         color: 'red',      // Border color of the circle
         fillColor: '#f03', // Fill color (red)
         fillOpacity: 0.5,  // Opacity of the fill
-        radius: 400         // Radius in meters (adjust this value as needed)
+        radius: 300         // Radius in meters (adjust this value as needed)
     }).addTo(markers);
 
     map.setView(target, 17);
