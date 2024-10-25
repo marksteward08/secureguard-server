@@ -357,7 +357,11 @@ async function locate(requestedIndex) {
 
     L.marker(target, {
         icon : customIcon
-    }).addTo(markers);
+    }).addTo(markers).bindPopup(
+        `<strong>Your Phone's Location</strong><br>
+        <a href="https://www.google.com/maps/search/?api=1&query=${loc.lat},${loc.lon}" target="_blank">
+            Open in Google Maps
+        </a>`);
 
     L.circle(target, {
         color: 'red',      // Border color of the circle
