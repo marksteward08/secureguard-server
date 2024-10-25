@@ -355,13 +355,15 @@ async function locate(requestedIndex) {
         iconSize: [28, 41],  // Size of the icon [width, height]
     });
 
-    L.marker(target, {
+    const marker = L.marker(target, {
         icon : customIcon
     }).addTo(markers).bindPopup(
         `<strong>Your Phone's Location</strong><br>
         <a href="https://www.google.com/maps/search/?api=1&query=${loc.lat},${loc.lon}" target="_blank">
             Open in Google Maps
-        </a>`);
+    </a>`);
+
+    marker.openPopup();
 
     L.circle(target, {
         color: 'red',      // Border color of the circle
