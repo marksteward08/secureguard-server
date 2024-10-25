@@ -351,8 +351,8 @@ async function locate(requestedIndex) {
     markers.clearLayers();
 
     const customIcon = L.icon({
-        iconUrl: 'assets/phone.gif', // Path to your custom image
-        iconSize: [28, 45],  // Size of the icon [width, height]
+        iconUrl: 'assets/phone.png', // Path to your custom image
+        iconSize: [28, 41],  // Size of the icon [width, height]
     });
 
     L.marker(target, {
